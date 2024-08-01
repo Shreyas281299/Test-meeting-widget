@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { WebexMeetingsWidget } from "@webex/widgets";
+
+import "@webex/widgets/dist/css/webex-widgets.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <WebexMeetingsWidget
+        style={{ width: "1000px", height: "500px" }} // Substitute with any arbitrary size or use `className`
+        accessToken=""
+        meetingDestination=""
+      />
     </div>
   );
 }
